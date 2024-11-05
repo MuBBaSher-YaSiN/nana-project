@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo-container">
+                <a href="Home.html"><img src="images/logo.png" alt="ChrisTech Logo" class="logo"></a>
+            </li>
+            <li><a href="Home.html">Home</a></li>
+            <li>
+                <a href="#">Categories</a>
+                <ul class="dropdown">
+                    <li><a href="Electronics.html">Electronics</a></li>
+                    <li><a href="HomeAppliances.html">Home Appliances</a></li>
+                    <li><a href="Fitness&Health.html">Fitness & Health</a></li>
+                    <li><a href="Beauty&Fashion.html">Beauty & Fashion</a></li>
+                </ul>
+            </li>
+    
+            <li class="search-container">
+                <!--add id and form = search-keyword, search.php, onclick -->
+                <form id="search-form" action="Server/api/search.php" method="GET">
+                    <input type="text" id="search-keyword" placeholder="Search..." name="keyword">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="search-results"></div>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="AboutChrisTech.html">About ChrisTech</a></li>
+            <li><a href="Login.html">Sign In/ Register</a></li>
+            <li><a href="ShoppingCarts.html">Cart</a></li>
+            
+
+        </ul>
+    </nav>
+    
+
+    <div id="AboutChrisTech">
+        <h1>About Chris Tech Online Ecommerce Store</h1>
+        <hr>
+        <h2>General Introduction of Chris Tech Online Store</h2>
+        <p class="designP">
+            Chris Tech Solutions is a leading online retailer, offering a wide range of products, from electronics to home essentials, 
+            aimed at making life easier and more connected for our customers. Founded in 2015, Chris Tech has rapidly grown into one 
+            of the top online marketplaces by focusing on customer satisfaction, competitive pricing, and a user-friendly shopping experience.
+        </p>
+        <hr>
+        <h2>Our Company And Team</h2>
+        <div class="carousel">
+            <img class="slides fade" src="images/ourPic.jpg" alt="OurPic">
+            <img class="slides fade" src="images/office.jpg" alt="OurPic" style="width: 728px; height:408px;">
+            <img class="slides fade" src="images/office1.jpg" alt="OurPic" style="width: 728px; height:408px;">
+        </div>
+
+        <div class="custom-container">
+            <div class="box">
+                <p class="designP">
+                    <b>CEO</b><br>
+                    Man Mei Yin Man (Chris)<br>
+                    A visionary leader with over 20 years of experience in the e-commerce industry, 
+                    Chris founded Chris Tech to revolutionize online retail with cutting-edge technology and customer-first policies.
+                </p>
+            </div>
+            
+            <div class="box">
+                <p class="designP">
+                    <b>CIO</b><br>
+                    Joshua Williams<br>
+                    A visionary leader with over 30 years of experience in the e-commerce industry, 
+                    Joshua plays a crucial role in shaping our strategic vision and operations, driving innovation in online retail.
+                </p>
+            </div>  
+            
+            <div class="box">
+                <p class="designP">
+                    <b>CTO</b><br>
+                    Saugat Khadka<br>
+                    An expert in cloud computing and database management, 
+                    Saugat oversees all technology aspects of the company, 
+                    ensuring that our platforms are secure, scalable, and user-friendly.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <h2 style="margin-bottom: 8px;">Our Mission And Services</h2>
+        <br>
+        <div class="container" style="margin-bottom: 50px;">
+            <div class="paragraph left">
+                <p class="designP" style="margin-top: 2px;">
+                    Our mission is to provide innovative products that enrich the lives of our customers, 
+                    while maintaining ethical and sustainable business practices. We are committed to giving 
+                    back to the community by supporting local charities, particularly those focused on education 
+                    and technology access for underprivileged youth. We strive to continuously expand our product 
+                    offerings to ensure customers always find what they need, whether it is the latest tech gadgets 
+                    or everyday household items. We are also increasingly expanding our categories.
+                 </p>
+            </div>
+
+            <div class="paragraph right">
+                <p class="designP" style="margin-top: 5px;">
+                    Chris Tech utilizes an advanced online trading platform, accessible via both web and mobile applications, 
+                    providing a seamless shopping experience for all types of users.
+                    Product Browsing and Search: Users can browse products by category 
+                    (e.g., Electronics, Home Appliances) or use the powerful search function with 
+                    filters like price range, customer ratings, and brand names to quickly find specific products. 
+                    For example, a user looking for wireless earbuds can filter by brand (Apple, Samsung) or by price ($50 to $200).
+                 </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Copyright &copy; 2024 , ChrisTech Online Store</h4>
+            <p>All rights reserved, Developed & Maintained by Chris, Joshua, Saugats</p>
+        </div>
+    </footer>
+
+    <script src = "webClient.js"></script>
+</body>
+</html>

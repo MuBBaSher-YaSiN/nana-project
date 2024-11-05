@@ -1,0 +1,126 @@
+/* base of the css formed from https://www.browserstack.com/guide/build-a-website-using-html-css */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+main{
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+figcaption{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.container{
+	display: flex;
+	gap: 30px;
+}
+
+.box{
+  color: #333;
+  flex: 1;
+  max-width: 900px;
+  background-color: #f0f0f0;
+  border-style: solid;
+  border-color: #D3D3D3;
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;  
+    height: auto;     
+    display: block;   
+    margin: 0 auto;   
+}
+
+.video{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+video{
+    width: 100%; 
+    height: auto;
+}
+
+footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    margin: 0;
+}
+
+
+
+
+
+
+
+

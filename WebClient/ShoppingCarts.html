@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo-container">
+                <a href="Home.html"><img src="images/logo.png" alt="ChrisTech Logo" class="logo"></a>
+            </li>
+            <li><a href="Home.html">Home</a></li>
+            <li>
+                <a href="#">Browse</a>
+                <ul class="dropdown">
+                    <li><a href="browse.html?category=Electronics" class="category">Electronics</a></li>
+                    <li><a href="browse.html?category=Home Appliances" class="category">Home Appliances</a></li>
+                    <li><a href="browse.html?category=Fitness & Health" class="category">Fitness & Health</a></li>
+                    <li><a href="browse.html?category=Beauty & Fashion" class="category">Beauty & Fashion</a></li>
+                </ul>
+            </li>
+            <li class="search-container">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="AboutChrisTech.html">About ChrisTech</a></li>
+            <li><a href="Login.html">Sign In/ Register</a></li>
+            <li><a href="ShoppingCarts.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div id="ShoppingCarts">
+        <h1>ShoppingCarts</h1>
+        <hr>
+        <div id="shopping-cart">
+            <h1>Your Shopping Cart</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+
+                </tbody>
+            </table>
+
+            <div id="cart-summary">
+                <h2>Cart Summary</h2>
+                <p id="total-price">Total: $0.00</p>
+                <button id="checkout-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-section">
+            <h4>Copyright &copy; 2024 , ChrisTech Online Store</h4>
+            <p>All rights reserved, Developed & Maintained by Chris, Joshua, Saugats</p>
+        </div>
+    </footer>
+    <script src = "webClient.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo-container">
+                <a href="Home.html"><img src="images/logo.png" alt="ChrisTech Logo" class="logo"></a>
+            </li>
+            <li><a href="Home.html">Home</a></li>
+            <li>
+                <a href="#">Browse</a>
+                <ul class="dropdown">
+                    <li><a href="browse.html?category=Electronics" class="category">Electronics</a></li>
+                    <li><a href="browse.html?category=Home Appliances" class="category">Home Appliances</a></li>
+                    <li><a href="browse.html?category=Fitness & Health" class="category">Fitness & Health</a></li>
+                    <li><a href="browse.html?category=Beauty & Fashion" class="category">Beauty & Fashion</a></li>
+                </ul>
+            </li>
+            <li class="search-container">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="AboutChrisTech.html">About ChrisTech</a></li>
+            <li><a href="Login.html">Sign In/ Register</a></li>
+            <li><a href="ShoppingCarts.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div id="Browse">
+        <h1 id="category-title">Browse</h1>
+        <hr>
+        <div class="product-list"></div> <!-- Div to hold the product list -->
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Copyright &copy; 2024, ChrisTech Online Store</h4>
+            <p>All rights reserved, Developed & Maintained by Chris, Joshua, Saugats</p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+
+            const params = new URLSearchParams(window.location.search);
+            const category = params.get('category');
+            if (category){
+                $('#category-title').text(category);
+                fetchProducts(category);
+            }
+    
+            $('.category').click(function(e){
+                e.preventDefault(); 
+                var categoryName = $(this).text();
+                $('#category-title').text(categoryName);
+                window.location.href = 'browse.html?category=' + encodeURIComponent(categoryName);
+            });
+        });
+    
+        function fetchProducts(category){
+            $.ajax({
+                type: 'GET',
+                url: '../server/api/fetch_products.php', 
+                data: {category: category}, 
+                dataType: 'json',
+                success: function(products){
+                    $('.product-list').empty();
+                    if (products.length > 0) {
+                        $.each(products, function(index, product){
+                            $('.product-list').append(
+                                `<div class="product">
+                                    <h2>${product.ProductName}</h2>
+                                    <p>Price: $${product.Price}</p>
+                                    <p>Stock: ${product.Stock}</p>
+                                </div>`
+                            );
+                        });
+                    } else {
+                        $('.product-list').append('<p>No products found in this category.</p>');
+                    }
+                },
+                error: function() {
+                    $('.product-list').append('<p>Error retrieving product list.</p>');
+                }
+            });
+        }
+    </script>
+    
+
+</body>
+</html>
